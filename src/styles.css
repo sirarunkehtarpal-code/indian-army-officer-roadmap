@@ -148,9 +148,20 @@ body { background: var(--mist); font-size: 16px; }
 @keyframes orbit-shift { from { transform: rotate(-35deg) skewX(-15deg) scale(1); } to { transform: rotate(-25deg) skewX(-15deg) scale(1.06); } }
 @keyframes note-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
 @media (max-width: 850px) { .routes-section, .strategy-section { padding-left: 22px; padding-right: 22px; }.timeline-block { padding: 14px; } }
-@media (max-width: 600px) { .topbar { position: fixed; }.hero-section { background: radial-gradient(circle at 80% 55%, rgba(105,135,83,.22), transparent 30%), var(--forest); }.section-heading > p:not(.eyebrow), .prepare-head > p { font-size: 15px; }.timeline-block { padding: 10px; }.data-table-wrap { box-shadow: none; } }
+@media (max-width: 600px) { .topbar { position: fixed; }.hero-section { background: radial-gradient(circle at 80% 55%, rgba(105,135,83,.22), transparent 30%), var(--forest); }.hero-aside { opacity: .27; top: 350px; }.hero-note { display: none; }.hero-bottomline { font-size: 8px; }.section-heading > p:not(.eyebrow), .prepare-head > p { font-size: 15px; }.timeline-block { padding: 10px; }.data-table-wrap { box-shadow: none; } }
 @media (max-width: 850px) { .entry-guide-card { grid-template-columns: 1fr; }.entry-guide-head { padding: 22px; }.entry-guide-copy { padding: 22px; } }
 @media (max-width: 850px) { .selection-grid { grid-template-columns: 1fr 1fr; }.ssb-panel, .medical-panel { grid-template-columns: 1fr; }.matrix-row { grid-template-columns: 1fr .7fr auto; }.matrix-row p { grid-column: 1 / -1; } }
 @media (max-width: 600px) { .entry-guide { margin-top: 48px; }.entry-guide-age { font-size: 9px; }.entry-guide-facts, .entry-guide-deep { grid-template-columns: 1fr; } }
 @media (max-width: 600px) { .selection-grid { grid-template-columns: 1fr; }.ssb-panel, .medical-panel { gap: 25px; padding: 24px 20px; }.ssb-list > div { grid-template-columns: 65px 1fr; }.medical-list { grid-template-columns: 1fr; }.matrix-row { grid-template-columns: 1fr auto; }.matrix-row strong { grid-row: 2; }.matrix-row p { grid-column: 1 / -1; grid-row: 3; }.matrix-row > span { grid-column: 1 / -1; } }
+
+/* Keep the planning brief calm and sequential on larger screens too. */
+.route-layout, .timeline-tables { grid-template-columns: 1fr; }
+.route-layout { gap: 24px; }
+.route-detail { min-height: auto; }
+.selection-grid, .strategy-cards, .degree-grid, .backup-grid { grid-template-columns: 1fr; }
+.selection-card { min-height: 0; }
+.strategy-cards article, .degree-grid article, .backup-grid article { min-height: 0; }
+.timeline-block { width: 100%; }
+.timeline-block + .timeline-block { margin-top: 18px; }
+@media (min-width: 851px) { .route-list { max-width: 760px; width: 100%; }.route-detail { max-width: 100%; }.entry-guide-card { grid-template-columns: 1fr; }.entry-guide-head { align-items: center; }.entry-guide-copy { padding-top: 24px; } }
 @media (prefers-reduced-motion: reduce) { .hero-grid, .hero-copy, .hero-aside, .compass, .orbit-one, .orbit-two, .hero-note { animation: none; }.overview-item:hover, .route-detail:hover, .strategy-cards article:hover, .degree-grid article:hover, .backup-grid article:hover, .flow-step:hover, .final-stats div:hover { transform: none; } }
