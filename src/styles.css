@@ -14,6 +14,8 @@ button { font: inherit; }
 .nav-links { align-items: center; display: flex; gap: clamp(18px, 3vw, 44px); }
 .nav-links > a:not(.nav-download) { color: #c7d1c4; font: 11px 'DM Mono', monospace; letter-spacing: .08em; text-transform: uppercase; }
 .nav-links > a:not(.nav-download):hover, .text-link:hover { color: var(--brass-light); }
+.slide-download { align-items: center; border: 1px solid rgba(216,184,120,.65); color: var(--brass-light); display: inline-flex; font: 10px 'DM Mono', monospace; gap: 7px; letter-spacing: .08em; padding: 9px 12px; text-transform: uppercase; transition: background .2s ease, color .2s ease; }
+.slide-download:hover { background: var(--brass-light); color: var(--forest); }
 .nav-download, .button { align-items: center; display: inline-flex; gap: 10px; }
 .nav-download { border: 1px solid rgba(216,184,120,.6); color: var(--brass-light); font: 11px 'DM Mono', monospace; letter-spacing: .04em; padding: 10px 14px; }
 .menu-button { background: none; border: 0; color: white; display: none; }
